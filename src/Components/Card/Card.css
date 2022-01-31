@@ -1,0 +1,275 @@
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.grid-container .card {
+  background-color: #f8f8f8;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0px 0px 16px 9px #b5c5e32e;
+          box-shadow: inset 0px 0px 16px 9px #b5c5e32e;
+}
+
+.grid-container .card .card_img {
+  border: 3px solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 240px;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 3px 15px 4px #0000000d;
+          box-shadow: 0px 3px 15px 4px #0000000d;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+.grid-container .card .card_img img {
+  max-width: 100%;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.grid-container .card .card_name p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  text-transform: capitalize;
+  text-shadow: 3px 7px 4px #00000024;
+}
+
+.grid-container .card .card_abilities {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  grid-gap: 5px;
+  width: 100%;
+}
+
+.grid-container .card .card_abilities p.title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  text-align: left;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.grid-container .card .card_abilities p.card_ability {
+  margin: 0;
+  line-height: 40px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+  background-color: #f5e7cc6b;
+  width: 100%;
+  font-weight: bold;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.grid-container .card .card_abilities p.card_ability:hover {
+  background-color: #fff;
+  -webkit-transform: translate(0px, -2px) scale(1.09);
+          transform: translate(0px, -2px) scale(1.09);
+  -webkit-box-shadow: 1px 4px 13px -4px #00000040;
+          box-shadow: 1px 4px 13px -4px #00000040;
+  cursor: pointer;
+}
+
+.grid-container .card .footerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.grid-container .card .footerInfo .card_height p,
+.grid-container .card .footerInfo .card_weight p {
+  margin: 0;
+}
+
+.grid-container .card:hover .card_img img {
+  -webkit-animation: zoom-in-zoom-out 5s linear infinite;
+          animation: zoom-in-zoom-out 5s linear infinite;
+}
+
+.btn_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f8f8f8;
+  margin: 15px 0;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.btn_group button {
+  min-width: 150px;
+  line-height: 40px;
+  margin: 0 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn_group .perPage {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  right: 20px;
+}
+
+.btn_group .perPage select {
+  min-width: 60px;
+  border-radius: 10px;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 7px 10px;
+  margin: 0 0 0 10px;
+}
+
+.btn_group.scrolled {
+  padding: 10px 0;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  width: calc(100% - 20px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 15px 4px #00000014;
+          box-shadow: 0px 0px 15px 4px #00000014;
+  border-radius: 0 0 10px 10px;
+}
+
+@-webkit-keyframes zoom-in-zoom-out {
+  0% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn_group {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .btn_group .perPage {
+    position: relative;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    right: unset;
+    padding: 0 20px 5px;
+  }
+  .btn_group .perPage select, .btn_group .perPage p {
+    margin: 0;
+  }
+  .btn_group button {
+    font-size: 14px;
+    min-width: 100px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=Card.css.map */
